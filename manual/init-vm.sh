@@ -11,10 +11,10 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
 sudo setcap 'cap_net_bind_service=+ep' $(readlink -f $(which node))
 
 # Copy service config
-cp manual/chat.service /etc/systemd/system
+sudo cp manual/chat.service /etc/systemd/system
 
 # Make unix afare of new service
-systemctl daemon-reload
+sudo systemctl daemon-reload
 
 # Install Redis
 cd "$HOME"

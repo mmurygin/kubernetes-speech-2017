@@ -5,10 +5,13 @@ After=network.target
 [Service]
 ExecStart=/opt/redispubsub/bin/www
 Restart=always
-User=nobody
-Group=nobody
+User=node-runtime
+Group=node-runtime
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=NODE_ENV=production
+Environment=PORT=80
+Environment=REDIS_HOST=localhost
+Environment=REDIS_PORT=6379
 WorkingDirectory=/opt/redispubsub
 
 [Install]
