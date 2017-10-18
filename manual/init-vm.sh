@@ -10,10 +10,9 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
 # Allow inbound access to 80 port without root
 sudo setcap 'cap_net_bind_service=+ep' $(readlink -f $(which node))
 
-# Copy service config
+# Configure node service
+sudo adduser --system --group --no-create-home node-runtime
 sudo cp manual/chat.service /etc/systemd/system
-
-# Make unix afare of new service
 sudo systemctl daemon-reload
 
 # Install Redis
