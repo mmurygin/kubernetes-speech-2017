@@ -27,7 +27,7 @@ redis-server --daemonize yes
 
 ## Configure node service
 adduser --system --group --no-create-home node-runtime
-wget https://raw.githubusercontent.com/m-murygin/it-city-2017/master/manual/chat.service /etc/systemd/system
+wget https://raw.githubusercontent.com/m-murygin/it-city-2017/master/manual/chat.service -P /etc/systemd/system
 systemctl daemon-reload
 
 ## Clone app

@@ -12,7 +12,7 @@ Environment=NODE_ENV=production
 Environment=PORT=80
 Environment=REDIS_HOST=localhost
 Environment=REDIS_PORT=6379
-WorkingDirectory=/opt/rapp
+WorkingDirectory=/opt/app
 
 [Install]
 WantedBy=multi-user.target
