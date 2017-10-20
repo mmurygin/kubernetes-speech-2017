@@ -34,6 +34,7 @@ systemctl daemon-reload
 git clone https://github.com/m-murygin/node-chat.git /opt/chat
 cd /opt/chat
 npm install
+chown -R node-runtime /opt/chat
 
 ## Run app
 systemctl start chat
