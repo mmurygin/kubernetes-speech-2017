@@ -8,4 +8,5 @@ gcloud compute instances create "vm-manual" \
     --image-project "ubuntu-os-cloud" \
     --boot-disk-size "10" \
     --boot-disk-type "pd-ssd" \
-    --boot-disk-device-name "vm-manual"
+    --boot-disk-device-name "vm-manual" \
+    --metadata-from-file startup-script=manual/startup.sh

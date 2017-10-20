@@ -3,7 +3,7 @@ Description=Chat app
 After=network.target
 
 [Service]
-ExecStart=/opt/redispubsub/bin/www
+ExecStart=/opt/app/index.js
 Restart=always
 User=node-runtime
 Group=node-runtime
@@ -12,7 +12,7 @@ Environment=NODE_ENV=production
 Environment=PORT=80
 Environment=REDIS_HOST=localhost
 Environment=REDIS_PORT=6379
-WorkingDirectory=/opt/redispubsub
+WorkingDirectory=/opt/rapp
 
 [Install]
 WantedBy=multi-user.target
