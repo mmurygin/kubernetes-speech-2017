@@ -4,9 +4,8 @@ apt-get update
 apt-get install -y build-essential
 
 # Install NodeJS
-curl -sL https://deb.nodesource.com/setup_8.x | \
-    bash - && \
-    apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+apt-get install -y nodejs
 
 ## Allow inbound access to 80 port without root
 setcap 'cap_net_bind_service=+ep' $(readlink -f $(which node))
@@ -33,7 +32,7 @@ systemctl daemon-reload
 ## Clone app
 git clone https://github.com/m-murygin/node-chat.git /opt/chat
 cd /opt/chat
-npm install
+sudo npm install
 chown -R node-runtime /opt/chat
 
 ## Run app
