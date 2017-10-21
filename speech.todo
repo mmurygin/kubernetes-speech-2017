@@ -1,3 +1,4 @@
 ☐ display current ip
 ☐ configure redis as systemd
-
+☐ layout for mobile
+☐ add redis pubsub for broadcast
