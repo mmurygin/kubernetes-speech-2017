@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  selector:
+    matchLabels:
+      app: chat
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: chat
+        tier: frontend
+    spec:
+      containers:
+      - name: chat
+        image: muryginm/chat
+        env:
+        - name: REDIS_HOST
+          value: redis
+        - name: REDIS_PORT
+          value: '6379'
+        ports:
+        - containerPort: 80
