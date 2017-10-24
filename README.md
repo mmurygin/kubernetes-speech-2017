@@ -3,6 +3,7 @@
 This repo contains some helpers and scripts for speech on conference Gorod
 
 ## Prerequisites
+
 1. Install docker
 
     ```
@@ -17,8 +18,64 @@ This repo contains some helpers and scripts for speech on conference Gorod
     curl -sSL https://sdk.cloud.google.com | bash
     ```
 
+1. Install kubectl
+
+    ```
+    gcloud components install kubectl
+    ```
+
 1. Authenticate to Google Cloud Platform
 
     ```
     gcloud auth login
     ```
+
+## Manual deploy
+
+1. deploy
+
+    ```
+    ./manual/create-vm.sh
+    ```
+2. cleanup
+
+    ```
+    ./manual/cleanup.sh
+    ```
+
+## Deploy in docker container
+
+1. checkout source code and build image
+
+1. deploy
+
+    ```
+    ./docker/create-vm.sh
+    ```
+
+1. cleanup
+
+    ```
+    ./docker/cleanup.sh
+    ```
+
+## Deploy in kubernetes cluster
+
+1. create cluster
+
+    ```
+    ./kubernetes/create-cluster.sh
+    ```
+
+1. deploy app
+
+    ```
+    kubectl apply -f kubernet/spec/
+    ```
+
+1. cleanup
+
+    ```
+    ./kubernetes/cleanup.sh
+    ```
+
