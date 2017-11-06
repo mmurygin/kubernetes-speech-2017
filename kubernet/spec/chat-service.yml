@@ -4,6 +4,7 @@ metadata:
   name: chat
 spec:
   type: LoadBalancer
+  sessionAffinity: ClientIP
   ports:
   - port: 80
   selector:
