@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kubectl delete service frontend
+kubectl delete -f kubernet/spec
 
 # wait until gcloud deletes load balancer
 sleep 20
