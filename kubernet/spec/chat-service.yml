@@ -1,14 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
-  labels:
-    app: chat
-    tier: frontend
+  name: chat
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
     app: chat
-    tier: frontend

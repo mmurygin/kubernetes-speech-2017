@@ -6,16 +6,14 @@ spec:
   selector:
     matchLabels:
       app: redis
-      tier: backend
   replicas: 1
   template:
     metadata:
       labels:
         app: redis
-        tier: backend
     spec:
       containers:
       - name: chat-redis
-        image: redis:4.0.2-alpine
+        image: redis:4.0.2
         ports:
         - containerPort: 6379
