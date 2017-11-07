@@ -66,13 +66,13 @@ This repo contains some helpers and scripts for speech on conference Gorod
 1. create cluster
 
     ```
-    ./kubernetes/create-cluster.sh
+    ./kubernet/create-cluster.sh
     ```
 
 1. deploy app
 
     ```
-    kubectl apply -f kubernet/spec/
+    ./kubernet/deploy.sh
     ```
 
 1. cleanup
