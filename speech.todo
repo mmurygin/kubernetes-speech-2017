@@ -1,7 +1,0 @@
-☐ display current ip
-☐ configure redis as systemd
-✔ layout for mobile @done (10/24/2017, 3:47:55 PM)
-✔ add redis pubsub for broadcast @done (10/24/2017, 3:47:51 PM)
-☐ scale example
-☐ cleanup backend
-☐ fix issue with deploy in multiple replicas
